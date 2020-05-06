@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaweb课设</title>
+    <link rel="stylesheet" href="./layui/css/layui.css">
+    <style>
+        /*.layui-nav{*/
+        /*    display: flex;*/
+        /*}*/
+        .title{
+            margin-right: 10px;
+            font-size: 18px;
+            font-weight: 800;
+            color: #01AAED;
+            display: flex;
+            align-items: center;
+        }
+        .author{
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .avatar{
+            width: 40px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .author a{
+            color: #ffffff;
+            transition: .3s;
+        }
+        .author a:hover{
+            color: #009688;
+            transform: scale(1.1);
+        }
+        #web{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        #bg{
+            background-size: cover;
+            background-position: 100% 100%;
+            background-repeat: no-repeat;
+            position: fixed;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="bg" style="background-image: url(https://img.xiaoyou66.com/images/2020/02/06/tKb5.jpg);"></div>
+<ul class="layui-nav" lay-filter="navigation" style="display: flex">
+    <li class="title">JavaWeb课设</li>
+    <li class="layui-nav-item layui-this"><a id="experiment1" href="javascript:;">个人信息收集(实验1)</a></li>
+    <li class="layui-nav-item"><a id="experiment2" href="javascript:void(0);">css样式(实验2)</a></li>
+    <li class="layui-nav-item"><a id="experiment3" href="javascript:void(0);">下拉菜单(实验3)</a></li>
+    <li class="layui-nav-item"><a id="experiment4" href="javascript:void(0);">个人主页(实验4)</a></li>
+    <li class="layui-nav-item"><a id="experiment5" href="javascript:void(0);">网上答题评测系统(实验5)</a></li>
+    <li class="layui-nav-item"><a id="experiment6" href="javascript:void(0);">session购物车(实验6)</a></li>
+    <li class="layui-nav-item"><a id="experiment7" href="javascript:void(0);">javaBean猜数字(实验7)</a></li>
+    <li class="layui-nav-item"><a id="experiment8" href="javascript:void(0);">Servlet获取表单数据(实验8)</a></li>
+    <li class="author"><a href="https://xiaoyou66.com" title="访问作者博客" target="_blank"><img alt class="avatar" src="https://img.xiaoyou66.com/images/2020/02/20/tTSY.jpg"/>小游</a></li>
+</ul>
+<iframe id="web" src="experiment1.jsp"></iframe>
+<script src="./layui/layui.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.5.0/jquery.js"></script>
+<script>
+    layui.use('element', function(){
+        let element = layui.element;
+        element.on('nav(navigation)',function (data) {
+            //根据不同的选项切换不同的界面
+            $("#web").attr('src',data[0].id+".jsp")
+        })
+    });
+
+    //宽度自适应
+    $("#web").height($(document).height()-$(".layui-nav").height()*2);
+
+</script>
+</body>
+</html>

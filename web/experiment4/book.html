@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我喜欢的电影</title>
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <style>
+		.layui-container{
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            margin-top: 5%;
+            width: 50%;
+            background: #ffffff;
+            align-items: center;
+        }
+        .layui-card-header{
+        	text-align:center;
+        	font-size:25px;
+        	font-weight:800;
+        }
+        .movie-introduce .movie-image{
+            width: 120px;
+            max-height: 200px;
+    		border-radius: 3px;
+		    border-radius: 4px;
+		    transition: all .3s;
+		    cursor:pointer;
+        }
+        .movie-introduce .movie-image:hover{
+        	transform:scale(1.1);
+        }
+        .movie-title{
+			color: #494949;
+			font-size: 17px;
+			font-weight: 700;
+			width: 270px;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+        }
+        .movie-description{
+            margin-top: 11px;
+		    font-size: 12px;
+		    line-height: 20px;
+		    min-height: 87px;
+    	}
+    	.movie-introduce{
+    		display:flex;
+    	}   
+    	.movie-right{
+    		margin-left:10px;
+    		width:300px;
+    	} 
+    	</style>
+</head>
+<body>
+<div class="layui-container">
+	<div class="layui-card">
+		<div class="layui-card-header">我喜欢看的书</div>
+		<div class="layui-card-body">
+			<div class="movie-introduce">
+				<img class="movie-image" src="img/book1.jpg">
+				<div class="movie-right"> 
+					<div class="movie-title">三体:“地球往事”三部曲之一</div>
+					<div class="movie-description">文化大革命如火如荼进行的同时。军方探寻外星文明的绝秘计划“红岸工程”取得了突破性进展。但在按下发射键的那一刻，历经劫难的叶文洁没有意识到，她彻底改变了人类的命运。地球文明向宇宙发出的第一声啼鸣，以太阳为中心，以光速向宇宙深处飞驰……
+四光年外，“三体文明”正苦苦挣扎——三颗无规则运行的太阳主导下的百余次毁灭与重生逼迫他们逃离母星。而恰在此时。他们接收到了地球发来的信息。在运用超技术锁死地球人的基础科学之后。三体人庞大的宇宙舰队开始向地球进发……
+人类的末日悄然来临。</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="../layui/layui.js"></script>
+<script>
+
+</script>
+</body>
+</html>
